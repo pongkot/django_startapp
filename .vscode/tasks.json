@@ -41,6 +41,30 @@
                 "reveal": "silent"
             },
             "problemMatcher": []
+        },
+        {
+            "label": "Python: format (black)",
+            "type": "shell",
+            "command": "black .",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": [
+                {
+                    "owner": "python",
+                    "fileLocation": "absolute",
+                    "pattern": {
+                        "regexp": "^(\\S+)(\\s+(.*)$)?",
+                        "file": 1,
+                        "message": 3
+                    },
+                    "severity": "error"
+                }
+            ]
         }
     ]
 }
