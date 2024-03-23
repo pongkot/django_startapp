@@ -1,0 +1,25 @@
+
+# Django
+*.py[co]
+*~
+__pycache__/
+.env
+.env.backup
+.idea/
+.tox/
+.eggs/
+pip-selfcheck.json
+*.log
+local_settings.py
+
+# Virtualenv
+*.egg-info/
+.Python
+.venv
+
+# Bytedance
+.gitlab-ci.yml
+
+# Django
+.idea/
+.tox/
