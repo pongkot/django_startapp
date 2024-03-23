@@ -4,9 +4,30 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "echo",
+            "label": "Django: migrate",
             "type": "shell",
-            "command": "echo Hello"
+            "command": "python manage.py migrate",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Django: runserver",
+            "type": "shell",
+            "command": "python manage.py runserver",
+            "group": {
+                "kind": "test",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": []
         }
     ]
 }
