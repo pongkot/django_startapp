@@ -2,6 +2,13 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "2.0.0",
+    "inputs": [
+        {
+            "type": "promptString",
+            "id": "appName",
+            "description": "Django app name",
+        }
+    ],
     "tasks": [
         {
             "label": "Django: migrate",
@@ -64,6 +71,24 @@
                     },
                     "severity": "error"
                 }
+            ]
+        },
+        {
+            "label": "Django: startapp",
+            "type": "shell",
+            "command": "python",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": [],
+            "args": [
+                "manage.py",
+                "startapp",
+                "${input:appName}"
             ]
         }
     ]
