@@ -19,3 +19,7 @@ python manage.py runserver
 python manage.py migrate
 
 ```
+
+# Generate secret key
+
+[Djecrety - Django secret key generator](https://djecrety.ir/)
